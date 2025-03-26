@@ -14,8 +14,8 @@ app = FastAPI(title="Food-11 Classification API", version="1.0")
 
 # Define class labels
 CLASS_LABELS = [
-    'apple_pie', 'cheesecake', 'chicken_curry', 'french_fries', 'fried_rice',
-    'hamburger', 'hot_dog', 'ice_cream', 'omelette', 'pizza', 'sushi'
+    'apple pie', 'cheese cake', 'chicken curry', 'french fries', 'fried rice',
+    'hamburger', 'hot dog', 'ice cream', 'omelette', 'pizza', 'sushi'
 ]
 
 
@@ -64,4 +64,4 @@ async def predict(file: UploadFile = File(...)):
 
 # Run API server
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
