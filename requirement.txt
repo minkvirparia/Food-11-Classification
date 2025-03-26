@@ -1,0 +1,9 @@
+notebook
+torch
+torchvision
+scikit-learn
+python-dotenv
+fastapi
+uvicorn
+python-multipart
+streamlit
