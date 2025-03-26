@@ -63,7 +63,7 @@ The model is based on ResNet-50 with a custom classifier:
 ```
 >>> python -m venv myenv
 >>> myenv\Scripts\activate.bat
->>> pip install -r requirements.txt
+>>> pip install -r requirement.txt
 ```
 
 ## 🚀 Training & Inference
