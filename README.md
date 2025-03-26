@@ -89,3 +89,19 @@ Download Finetuned model: [Finetuned_Resnet50.pth](https://drive.google.com/uc?e
 ```
 python baseline_evaluation.py
 ```
+
+## 🎬 Demo  
+
+### 🔹 Running FastAPI Backend  
+Start the FastAPI server using the following command:  
+
+```
+python src/fastapi/app.py
+```
+
+### 🔹 Running Streamlit UI 
+Start the streamlit using the following command:  
+
+```
+python src/streamlit/main.py
+```
