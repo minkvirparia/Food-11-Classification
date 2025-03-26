@@ -9,7 +9,7 @@ def load_model(model_path, device):
     """Loads the fine-tuned ResNet-50 model."""
     try:
         model = torch.load(model_path, map_location=device, weights_only=False)
-        model.eval()  # Set model to evaluation mode
+        model.eval()
         print("Model loaded successfully!")
         return model
     except Exception as e:
@@ -29,23 +29,23 @@ def load_test_data(data_path, transform):
 def evaluate_model(model, test_loader, device):
     """Evaluates the model on the test dataset and calculates accuracy."""
     model.to(device)
-    model.eval()  # Ensure model is in evaluation mode
+    model.eval()
 
     all_preds, all_labels = [], []
 
     print("Evaluating model on test dataset...")
 
-    with torch.no_grad():  # Disable gradient calculations
+    with torch.no_grad():
         for images, labels in test_loader:
-            images, labels = images.to(device), labels.to(device)  # Move data to device
+            images, labels = images.to(device), labels.to(device)
 
             # Get model predictions
             outputs = model(images)
             _, preds = torch.max(outputs, 1)  # Get predicted class indices
 
             # Store predictions and true labels
-            all_preds.extend(preds.cpu().numpy())  # Convert to NumPy
-            all_labels.extend(labels.cpu().numpy())  # Convert to NumPy
+            all_preds.extend(preds.cpu().numpy())
+            all_labels.extend(labels.cpu().numpy())
 
     # Compute accuracy
     accuracy = accuracy_score(all_labels, all_preds)
@@ -62,10 +62,10 @@ def main():
     transform = weights.transforms()
 
     # Load model
-    model = load_model("./finetuned_resnet50.pth", device)
+    model = load_model("./models/finetuned_resnet50.pth", device)
 
     # Load test dataset 
-    test_dataset = load_test_data("D:/Mind Inventory Task/food11 dataset/test/", transform)
+    test_dataset = load_test_data("./Data/test/", transform)
 
     # Set random seed for reproducibility
     torch.manual_seed(42)
