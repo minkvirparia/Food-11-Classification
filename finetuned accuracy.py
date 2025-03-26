@@ -1,8 +1,20 @@
 import torch
+import random
+import numpy as np
 from torch.utils.data import DataLoader
 from torchvision.datasets import ImageFolder
 from torchvision.models import resnet50, ResNet50_Weights
 from sklearn.metrics import accuracy_score
+
+
+def set_seed(seed=42):
+    """Set seed for reproducibility."""
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    np.random.seed(seed)
+    random.seed(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
 
 
 def load_model(model_path, device):
@@ -28,6 +40,9 @@ def load_test_data(data_path, transform):
 
 def evaluate_model(model, test_loader, device):
     """Evaluates the model on the test dataset and calculates accuracy."""
+
+    set_seed(42)
+    
     model.to(device)
     model.eval()
 
