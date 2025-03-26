@@ -36,11 +36,11 @@ The model is based on ResNet-50 with a custom classifier:
 )
 ```
 
-🏋️ Training Details:  
+📌 Training Details:  
 
 🔹 **Number of Epochs:** 50  
 🔹 **Learning Rate:** 0.0001  
-🔹 **Loss Function:** CrossEntropyLoss  
+🔹 **Loss Function:** Cross-Entropy Loss  
 🔹 **Optimizer:** Adam 
 
 📌 Why ResNet-50?  
