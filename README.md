@@ -92,9 +92,18 @@ Download Finetuned model: [Finetuned_Resnet50.pth](https://drive.google.com/uc?e
 | **Testing** | **81.45%** |
 
 
-📌 **Note:** To check the baseline accuracy, run the following script:  
+📌 **Note:** 
+
+To check the baseline accuracy, run the following script:  
+
 ```
-python baseline_evaluation.py
+python baseline accuracy.py
+```
+
+ To check the finetuned accuracy, run the following script:  
+
+```
+python finetuned accuracy.py
 ```
 
 ## 🎬 Quick Start 
