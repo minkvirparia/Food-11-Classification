@@ -1,9 +1,10 @@
-notebook
+--extra-index-url https://download.pytorch.org/whl/cu118
 torch
 torchvision
 scikit-learn
-python-dotenv
 fastapi
 uvicorn
 python-multipart
 streamlit
+pillow
+numpy
