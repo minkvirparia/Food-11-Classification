@@ -12,12 +12,14 @@ Food classification is an important application in AI-powered nutrition tracking
 
 The Food-11 dataset consists of a training set with a total of 9,900 images, each class containing 900 images, and a test set with a total of 1,100 images, each class containing 100 images, making a total of 11,000 images.
 
-📞 Download Dataset: [Food-11 Dataset](https://www.kaggle.com/datasets/imbikramsaha/food11)
-
 📌 Classes:    
 
 🥧 **Apple Pie**, 🍰 **Cheese Cake**, 🍛 **Chicken Curry**, 🍟 **French Fries**, 🍚 **Fried Rice**,  
 🍔 **Hamburger**, 🌭 **Hot Dog**, 🍦 **Ice-cream**, 🍳 **Omelette**, 🍕 **Pizza**, 🍣 **Sushi**
+
+
+🔁 Download Dataset: [Food-11 Dataset](https://www.kaggle.com/datasets/imbikramsaha/food11) (Put the dataset in data directory)
+
 
 # 🛠️ Model Architecture
 
@@ -67,17 +69,17 @@ python train.py --train_folder ./data/train/ --epochs 10 --batch_size 32 --lr 0.
 To inference the model, run:
 
 ```
-python inference.py --image_path path/to/image.jpg
+python inference.py --model_path ./models/finetuned_resnet50.pth --input_folder ./inputs/ --output_folder ./results/
 ```
 
-Download Finetuned model: [Finetuned_Resnet50.pth](https://drive.google.com/uc?export=download&id=1J5rgk2rBY7a8WGjuvTnd3p1C55pB-q87)
+Download Finetuned model: [Finetuned_Resnet50.pth](https://drive.google.com/uc?export=download&id=1J5rgk2rBY7a8WGjuvTnd3p1C55pB-q87) (Put this model in models directory)
 
 ## 📊 Results  
 
 | Model                  | Accuracy  |
 |------------------------|-----------|
 | **Baseline (ResNet-50)**  | 14.73%   |
-|  **Fine-tuned (ResNet-50)** | **81.56%** ✅ |
+|  **Fine-tuned (ResNet-50)** | **81.56%** |
 
 📌 **Note:** To check the baseline accuracy, run the following script:  
 ```
