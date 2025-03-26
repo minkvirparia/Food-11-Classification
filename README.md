@@ -61,13 +61,13 @@ The model is based on ResNet-50 with a custom classifier:
 To train the model on Food-11, run:
 
 ```
-python src/train.py --epochs 10 --batch_size 32 --lr 0.0001
+python train.py --train_folder ./data/train/ --epochs 10 --batch_size 32 --lr 0.0001
 ```
 
 To inference the model, run:
 
 ```
-python src/inference.py --image_path path/to/image.jpg
+python inference.py --image_path path/to/image.jpg
 ```
 
 Download Finetuned model: [Finetuned_Resnet50.pth](https://drive.google.com/uc?export=download&id=1J5rgk2rBY7a8WGjuvTnd3p1C55pB-q87)
