@@ -48,6 +48,7 @@ The model is based on ResNet-50 with a custom classifier:
 🔹 Transfer learning for better performance  
 🔹 Handles complex food textures  
 🔹 Efficient feature extraction  
+🔹 Deep architecture with residual connections helps preventing vanishing gradients and enables effective training.
 
 ## ⚙️ Installation
 
