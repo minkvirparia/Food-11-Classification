@@ -1,13 +1,13 @@
 ## 📚 Project Overview
 
-Food classification is an important application in AI-powered nutrition tracking and dietary analysis. This project trains a ResNet-50 model to classify 11 food categories with high accuracy. I fine-tuned the model and used Grad-CAM to visualize predictions.
+This project focuses on classifying food images into 11 categories using a fine-tuned ResNet-50 model. The model is trained for high accuracy and deployed with FastAPI to serve predictions. I also created a Streamlit app that lets users upload images and get real-time classification results.
 
 📌 Key Features:  
 
-🔹 Pre-trained ResNet-50 with fine-tuning  
-🔹 Food-11 Dataset for classification  
-🔹 Grad-CAM visualization for interpretability  
-🔹 Streamlit app for real-time predictions  
+🔹 Pre-trained ResNet-50 with fine-tuning for better accuracy  
+🔹 Food-11 dataset used for classification  
+🔹 FastAPI serves as the model inference endpoint  
+🔹 Streamlit app provides a user-friendly interface for real-time predictions
 
 ## 🗂️ Dataset Information
 
@@ -35,6 +35,13 @@ The model is based on ResNet-50 with a custom classifier:
   (4): Linear(in_features=512, out_features=11, bias=True)
 )
 ```
+
+🏋️ Training Details:  
+
+🔹 **Number of Epochs:** 50  
+🔹 **Learning Rate:** 0.0001  
+🔹 **Loss Function:** CrossEntropyLoss  
+🔹 **Optimizer:** Adam 
 
 📌 Why ResNet-50?  
   
@@ -90,7 +97,7 @@ Download Finetuned model: [Finetuned_Resnet50.pth](https://drive.google.com/uc?e
 python baseline_evaluation.py
 ```
 
-## 🎬 Demo  
+## 🎬 Quick Start 
 
 ### 🔹 Running FastAPI Backend  
 Start the FastAPI server using the following command:  
@@ -105,3 +112,9 @@ Start the streamlit using the following command:
 ```
 python src/streamlit/main.py
 ```
+
+### 🔹 Demo  
+
+<p align="center">
+  <img src="assets/demo.gif" alt="Demo GIF" width="70%">
+</p>
